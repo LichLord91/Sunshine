@@ -523,8 +523,8 @@ public:
         if(monitor != std::end(pos->crtc_to_monitor)) {
           auto &viewport = monitor->second.viewport;
 
-          width    = viewport.width;
-          height   = viewport.height;
+          width    = viewport.height;
+          height   = viewport.width;
           offset_x = viewport.offset_x;
           offset_y = viewport.offset_y;
         }
