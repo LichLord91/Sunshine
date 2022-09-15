@@ -433,17 +433,17 @@ struct x11_attr_t : public display_t {
       }
       else {
         BOOST_LOG(warning) << "Couldn't get requested display info, defaulting to recording entire virtual desktop"sv;
-        width  = xattr.width;
-        height = xattr.height;
+        width  = xattr.height;
+        height = xattr.width;
       }
     }
     else {
-      width  = xattr.width;
-      height = xattr.height;
+      width  = xattr.height;
+      height = xattr.width;
     }
 
-    env_width  = xattr.width;
-    env_height = xattr.height;
+    env_width  = xattr.height;
+    env_height = xattr.width;
 
     return 0;
   }
